@@ -55,16 +55,15 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public boolean hasCity(City city) {
-        return false;
-//        return this.cities.contains(city);
+        return this.cities.contains(city);
     }
 
     public void deleteCity(City city) {
-
+        this.cities.remove(city);
     }
 
     public int countCities() {
-        return 0;
+        return this.cities.size();
     }
 
 }
