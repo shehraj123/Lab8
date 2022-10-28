@@ -1,5 +1,7 @@
 package com.example.lab8;
 
+import androidx.annotation.Nullable;
+
 public class City {
 
     private String city;
@@ -16,5 +18,11 @@ public class City {
 
     String getProvinceName(){
         return this.province;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        City toCompare = (City) obj;
+        return this.city == toCompare.getCityName();
     }
 }
